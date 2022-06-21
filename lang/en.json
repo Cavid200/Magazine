@@ -1,0 +1,63 @@
+{
+    "home":"Home",
+    "contact":"Contact",
+    "languages":"Languages",
+    "active":"Active",
+    "deactive":"Deactive",
+    "activate":"Activate",
+    "create":"Create",
+    "edit":"Edit",
+    "delete":"Delete",
+    "update":"Update",
+    "row":"Row",
+    "image":"Image",
+    "current image":"Current image",
+    "status":"Status",
+    "name":"Name",
+    "firstname":"Firstname",
+    "lastname":"Lastname",
+    "fullname":"Fullname",
+    "action":"Action",
+    "title":"Title",
+    "description":"Description",
+    "short description":"Short description",
+    "publish time":"Publish time",
+    "editor":"Editor",
+    "role name":"Role name",
+    "about":"About",
+    "email":"E-mail",
+    "password":"Password",
+    "confirm password":"Confirm Password",
+    "role":"Role",
+    
+
+    
+
+
+
+    "banners":"Banners",
+    "roles":"Roles",
+    "users":"Users",
+    "comments":"Comments",
+    
+
+    "important links":"Important links",
+    "categories":"Categories",
+    "contacts":"Contacts",
+    "social media":"Social Media",
+    "main image":"Main Image",
+    "settings":"Settings",
+    "tags":"Tags",
+    "posts":"Posts",
+    "contact us":"Contact us",
+    "role list":" Role List",
+    "role create":" Role Create",
+    "role update":" Role Update",
+    "user list":" User List",
+    "user create":" User Create",
+    "user update":" User Update"
+    
+    
+
+
+}

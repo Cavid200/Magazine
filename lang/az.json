@@ -1,0 +1,66 @@
+{
+    "home":"Ana səhifə",
+    "contact":"Əlaqə",
+    "languages":"Dillər",
+    "active":"Aktiv",
+    "deactive":"Deaktiv",
+    "activate":"Aktiv et",
+    "create":"Əlavə et",
+    "edit":"Redakte et",
+    "delete":"Sil",
+    "update":"Yenilə",
+    "row":"Sıra",
+    "image":"Foto",
+    "current image":"Cari foto",
+    "status":"Status",
+    "name":"Ad",
+    "firstname":"Ad",
+    "lastname":"Soyad",
+    "fullname":"Ad,Soyad",
+    "action":"Əməliyyat",
+    "title":"Başlıq",
+    "description":"Təsvir",
+    "short description":"Qısa təsvir",
+    "publish time":"Dərc vaxtı",
+    "editor":"Redaktor",
+    "role name":"Rol adı",
+    "about":"Haqqında",
+    "email":"E-poçt",
+    "password":"Şifrə",
+    "confirm password":"Şifrənin təsdiqi",
+    "role":"Vəzifə",
+    
+
+    
+    
+
+    
+
+    
+
+
+    "banners":"Bannerlər",
+    "users":"İstifadəçilər",
+    "roles":"Vəzifələr",
+    "comments":"Rəylər",
+    "important links":"Vacib linklər",
+    "categories":"Kateqoriyalar",
+    "social media":"Sosial Media",
+    "contacts":"Əlaqələr",
+    "main image":"Əsas şəkil",
+    "settings":"Tənzimləmələr",
+    "tags":"Etiketlər",
+    "posts":"Postlar",
+    "contact us":"Bizimlə əlaqə",
+    "role list":"Vəzifə Siyahısı",
+    "role create":"Vəzifə Yaratmaq",
+    "role update":" Vəzifə Yeniləmək",
+    "user list":"İstifadəçi Siyahısı",
+    "user create":"İstifadəçi Yaratmaq",
+    "user update":" İstifadəçi Yeniləmək"
+
+
+
+    
+
+}
