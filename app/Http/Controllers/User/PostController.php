@@ -20,5 +20,12 @@ class PostController extends Controller
         $like_exists = Like::where('user_id',auth()->user()->id)->where('post_id',$post->id)->count();
         return view('user.post.show',compact('post','popular_posts','like_count','like_exists')); 
     }
+
+    public function search (Request $request){
+
+        $posts = Post::with('categories')->where('title', 'LIKE', "%{$request->search}%")->get();
+        return view('user.post.search',compact('posts'));
+        
+    }
     
 }

@@ -69,6 +69,7 @@ Route::get('/admin/login',[AdminAuthController::class,'login'])->name('admin.log
 Route::post('/admin/login',[AdminAuthController::class,'post_login'])->name('admin.post_login');
 
 
+Route::get('/search',[UserPostController::class,'search'])->name('search');
 
 
 

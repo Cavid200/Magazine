@@ -6,7 +6,7 @@
         </a>
     </div>
 
-    <!-- Menu For Desktop Device -->
+    <!-- Menu For Desktop Device -->    
     <div class="main-nav">
         <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
@@ -60,7 +60,7 @@
 
                             <div class="search-overlay search-popup">
                                 <div class='search-box'>
-                                    <form class="search-form">
+                                    <form class="search-form" action="{{ route('search')}}" method="get">
                                         <input class="search-input" name="search" placeholder="Search" type="text">
 
                                         <button class="search-button" type="submit"><i
