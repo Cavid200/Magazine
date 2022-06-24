@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('tag list') }}</h3>
                 </div>
                 <div class="col-6">
                     <a style="float: right" href="{{ route('admin.tag.create') }}"
@@ -30,9 +30,9 @@
                             <table class="display" id="tags">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Name</th>
-                                        <th>Action</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('name') }}</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

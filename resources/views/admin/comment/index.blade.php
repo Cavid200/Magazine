@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('comment list') }}</h3>
                 </div>
             </div>
         </div>
@@ -26,10 +26,10 @@
                             <table class="display" id="contact_us">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Fullname</th>
-                                        <th>Created At</th>
-                                        <th>Action</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('fullname') }}</th>
+                                        <th>{{ __('created_at') }}</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,7 +40,7 @@
                                             <td>{{ $comment->created_at->diffForHumans() }}</td>
                                             <td>
                                                 <a href="{{ route('admin.comment.show', $comment) }}"
-                                                    class="btn btn-info">show</a>
+                                                    class="btn btn-info">{{ __('show') }}</a>
                                                 @if ($comment->isActive == 1)
                                                     <a href="{{ route('admin.comment.destroy', $comment) }}"
                                                         class="btn btn-danger delete">{{ __('delete') }}</a>

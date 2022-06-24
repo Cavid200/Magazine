@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('social_media create') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Name</label>
+                                                <label>{{ __('name') }}</label>
                                                 <input class="form-control" type="text" name="name"
                                                     placeholder="Name *" required>
                                                 @error('name')
@@ -42,7 +42,7 @@
                                                     placeholder="Url *" required>
                                             </div>
                                             <div class="mb-3">
-                                                <label>Icon</label>
+                                                <label>{{ __('icon') }}</label>
                                                 <input class="form-control" type="text" name="icon"
                                                     placeholder="Icon *" required>
                                             </div>

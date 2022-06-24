@@ -16,12 +16,12 @@ class IndexController extends Controller
     public function index(){
         $main_image=MainImage::firstOrFail();
         $posts=Post::where('isActive',1)->with('categories')->latest()->get();
-        $popular_posts=Post::orderByDesc('views')->take(6)->get();
-        $recent_posts=Post::orderByDesc('created_at')->with('categories')->take(3)->get();
-        $editor_posts=Post::where('isEditor',1)->get();
+        $popular_posts=Post::where('isActive',1)->latest('views')->take(6)->get();
+        $recent_posts=Post::where('isActive',1)->latest('created_at')->with('categories')->take(3)->get();
+        $editor_posts=Post::where('isActive',1)->where('isEditor',1)->take(4)->latest('created_at')->get();
         $random_category=Category::inRandomOrder()->firstOrFail();
         $random_posts_id=CategoryPost::where('category_id',$random_category->id)->take(4)->pluck('post_id');
-        $random_posts=Post::whereIn('id',$random_posts_id)->with('categories')->get();
+        $random_posts=Post::where('isActive',1)->whereIn('id',$random_posts_id)->with('categories')->get();
         $banners=Banner::where('isShow',1)->take(2)->get();
         $users=User::get();
 

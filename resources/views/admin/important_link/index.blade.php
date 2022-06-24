@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('important_link list') }}</h3>
                 </div>
                 <div class="col-6">
                     <a style="float: right" href="{{ route('admin.important_link.create') }}"
@@ -30,10 +30,10 @@
                             <table class="display" id="important_links">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Name</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('name') }}</th>
                                         <th>Url</th>
-                                        <th>Action</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

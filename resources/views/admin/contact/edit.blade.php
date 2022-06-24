@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('contact update') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -29,7 +29,7 @@
                                 <div class="form theme-form">
                                     <div class="row">
                                         <div class="mb-3">
-                                            <label>Phone</label>
+                                            <label>{{ __('phone') }}</label>
                                             <input class="form-control" type="text" value="{{ $contact->phone }}" name="phone"
                                                 placeholder="Phone *" required>
                                             @error('phone')
@@ -37,17 +37,17 @@
                                             @enderror
                                         </div>
                                         <div class="mb-3">
-                                            <label>Email</label>
+                                            <label>{{ __('email') }}</label>
                                             <input class="form-control" type="email" value="{{ $contact->email }}" name="email"
                                                 placeholder="Email *" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label>Map</label>
+                                            <label>{{ __('map') }}</label>
                                             <input class="form-control" type="text" value="{{ $contact->map }}" name="map"
                                                 placeholder="Map *" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label>Address</label>
+                                            <label>{{ __('address') }}</label>
                                            <textarea name="address"  class="form-control"  placeholder="Address *"  cols="3" rows="3" required> {{ $contact->address }}</textarea>
                                         </div>
                                     </div>

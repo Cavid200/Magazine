@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('contact_us list') }}</h3>
                 </div>
             </div>
         </div>
@@ -26,11 +26,11 @@
                             <table class="display" id="contact_us">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Action</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('name') }}</th>
+                                        <th>{{ __('email') }}</th>
+                                        <th>{{ __('phone') }}</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,7 +42,7 @@
                                             <td>{{ $contact_us->phone }}</td>
                                             <td>
                                                 <a href="{{ route('admin.contact_us.show', $contact_us) }}"
-                                                    class="btn btn-info">show</a>
+                                                    class="btn btn-info">{{ __('show') }}</a>
                                             </td>
                                         </tr>
                                     @endforeach

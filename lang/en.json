@@ -29,7 +29,18 @@
     "password":"Password",
     "confirm password":"Confirm Password",
     "role":"Role",
-    
+    "icon":"Icon",
+    "phone":"Phone",
+    "map":"Map",
+    "address":"Address",
+    "subject":"Subject",
+    "message":"Message",
+    "show":"Show",
+    "created_at":"Date",
+    "content":"Content",
+
+
+
 
     
 
@@ -50,12 +61,58 @@
     "tags":"Tags",
     "posts":"Posts",
     "contact us":"Contact us",
+
     "role list":" Role List",
     "role create":" Role Create",
     "role update":" Role Update",
+
     "user list":" User List",
     "user create":" User Create",
-    "user update":" User Update"
+    "user update":" User Update",
+
+    "banner list":" Banner List",
+    "banner create":" Banner Create",
+    "banner update":" Banner Update",
+
+    "important_link list":" Link List",
+    "important_link list create":" Link Create",
+    "important_link list update":" Link Update",
+
+    "category list":" Category List",
+    "category create":" Category Create",
+    "category update":" Category Update",
+
+    "social_media list":" Social media List",
+    "social_media create":" Social media Create",
+    "social_media update":" Social media Update",
+
+    
+    "contact update":" Contact Update",
+
+    "manin_image update":" Main image Update",
+
+    "setting update":" Setting Update",
+
+    "tag list":" Tag List",
+    "tag create":" Tag Create",
+    "tag update":" Tag Update",
+
+    "post list":" Post List",
+    "post create":" Post Create",
+    "post update":" Post Update",
+
+    "contact_us list":" Contact us List",
+    "contact_us show":" Contact us Show",
+    
+    "comment list":" Comment List",
+    "comment show":"Comment Show"
+
+
+
+
+
+    
+    
     
     
 

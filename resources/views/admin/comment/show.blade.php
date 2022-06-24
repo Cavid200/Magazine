@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('comment show') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -28,12 +28,12 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Fullname</label>
+                                                <label>{{ __('fullname') }}</label>
                                                 <input class="form-control" type="text" disabled
                                                     value="{{ $comment->fullname }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label>Content</label>
+                                                <label>{{ __('content') }}</label>
                                                 <textarea class="form-control" cols="30" rows="5" disabled>{{ $comment->content }}</textarea>
                                             </div>
                                         </div>

@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('social_media list') }}</h3>
                 </div>
                 <div class="col-6">
                     <a style="float: right" href="{{ route('admin.social_media.create') }}"
@@ -30,11 +30,11 @@
                             <table class="display" id="social_medias">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Name</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('name') }}</th>
                                         <th>Url</th>
-                                        <th>Icon</th>
-                                        <th>Action</th>
+                                        <th>{{ __('icon') }}</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

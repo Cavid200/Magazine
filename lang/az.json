@@ -29,14 +29,20 @@
     "password":"Şifrə",
     "confirm password":"Şifrənin təsdiqi",
     "role":"Vəzifə",
-    
+    "icon":"Simvol",
+    "phone":"Mobil",
+    "map":"Xəritə",
+    "address":"Ünvan",
+    "footer":"Altbilgi",
+    "subject":"Mövzu",
+    "message":"Mesaj",
+    "show":"Göstər",
+    "created_at":"Tarix",
+    "content":"Məzmun",
 
-    
-    
 
-    
 
-    
+
 
 
     "banners":"Bannerlər",
@@ -52,12 +58,50 @@
     "tags":"Etiketlər",
     "posts":"Postlar",
     "contact us":"Bizimlə əlaqə",
+
     "role list":"Vəzifə Siyahısı",
     "role create":"Vəzifə Yaratmaq",
     "role update":" Vəzifə Yeniləmək",
+
     "user list":"İstifadəçi Siyahısı",
     "user create":"İstifadəçi Yaratmaq",
-    "user update":" İstifadəçi Yeniləmək"
+    "user update":" İstifadəçi Yeniləmək",
+
+    "banner list":" Banner Siyahısı",
+    "banner create":" Banner Yaratmaq",
+    "banner update":" Banner Yeniləmək",
+
+    "important_link list":" Link Siyahısı",
+    "important_link list create":" Link Yaratmaq",
+    "important_link list update":" Link Yeniləmək",
+
+    "category list":" Kategoriya Siyahısı",
+    "category create":" Kategoriya Yaratmaq",
+    "category update":" Kategoriya Yeniləmək",
+
+    "social_media list":" Sosial media Siyahısı",
+    "social_media create":" Sosial media  Yaratmaq",
+    "social_media update":" Sosial media  Yeniləmək",
+
+    "contact update":" Əlaqə Yeniləmək",
+
+    "manin_image update":"Əsas şəkil Yeniləmək",
+
+    "setting update":"Tənzimləmə Yeniləmək",
+
+    "tag list":" Teq Siyahısı",
+    "tag create":"Teq  Yaratmaq",
+    "tag update":"Teq Yeniləmək",
+
+    "post list":" Post Siyahısı",
+    "post create":" Post Yaratmaq",
+    "post update":" Post Yeniləmək",
+
+    "contact_us list":"Bizimlə əlaqə Siyahısı",
+    "contact_us show":"Bizimlə əlaqə  Göstər",
+    
+    "comment list":" Rəy Siyahısı",
+    "comment show":"Rəy Göstər"
 
 
 

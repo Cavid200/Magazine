@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('contact_us list') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -28,27 +28,27 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Name</label>
+                                                <label>{{ __('name') }}</label>
                                                 <input class="form-control" type="text" disabled
                                                     value="{{ $contact_us->name }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label>E-mail</label>
+                                                <label>{{ __('email') }}</label>
                                                 <input class="form-control" type="text" disabled
                                                     value="{{ $contact_us->email }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label>Phone</label>
+                                                <label>{{ __('phone') }}</label>
                                                 <input class="form-control" type="text" disabled
                                                     value="{{ $contact_us->phone }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label>Subject</label>
+                                                <label>{{ __('subject') }}</label>
                                                 <input class="form-control" type="text" disabled
                                                     value="{{ $contact_us->subject }}">
                                             </div>
                                             <div class="mb-3">
-                                                <label>Message</label>
+                                                <label>{{ __('message') }}</label>
                                                 <textarea class="form-control" cols="30" rows="5" disabled>{{ $contact_us->message }}</textarea>
                                             </div>
                                         </div>

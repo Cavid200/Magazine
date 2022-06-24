@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('banner update') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Image</label>
+                                                <label>{{ __('image') }}</label>
                                                 <input class="form-control" type="file" name="image" onchange="mainThumbURL(this)">
                                                 @error('image')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -37,11 +37,11 @@
                                             </div>
                                             <img class="mt-3" src="" id="mainThumb">
                                             <div class="mb-3">
-                                                <label>Current Image</label>
+                                                <label>{{ __('current image') }}</label>
                                                 <img src="{{ asset($banner->image) }}" alt="" style="width: 100px">
                                             </div>
                                             <div class="mb-3">
-                                                <label>Status</label>
+                                                <label>{{ __('status') }}</label>
                                                 <input @checked($banner->isShow) type="checkbox" name="isShow"
                                                     style="width: 20px; height:20px">
                                                     @error('isShow')

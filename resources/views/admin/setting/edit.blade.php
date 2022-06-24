@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('setting update') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Image</label>
+                                                <label>{{ __('image') }}</label>
                                                 <input class="form-control" type="file" name="logo" onchange="mainThumbURL(this)">
                                                 @error('image')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -37,15 +37,15 @@
                                             </div>
                                             <img class="mt-3" src="" id="mainThumb">
                                             <div class="mb-3">
-                                                <label>Current Image</label>
+                                                <label>{{ __('current image') }}</label>
                                                 <img src="{{ asset($setting->logo) }}" alt="" style="width: 100px">
                                             </div>  
                                             <div class="mb-3">
-                                                <label>Footer</label>
+                                                <label>{{ __('footer') }}</label>
                                                 <textarea name="footer"  class="form-control" cols="3" rows="3">{{ $setting->footer }}</textarea>
                                             </div>
                                             <div class="mb-3">
-                                                <label>About</label>
+                                                <label>{{ __('about') }}</label>
                                                 <textarea name="about" class="form-control"  cols="3" rows="3">{{ $setting->about }}</textarea>
                                             </div>
                                         </div>

@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('category update') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -31,7 +31,7 @@
                                         <div class="col">
                                             <div class="mb-3">
                                                 <div class="mb-3">
-                                                    <label>Name</label>
+                                                    <label>{{ __('name') }}</label>
                                                     <input class="form-control" type="text" name="name" enctype="multipart/form-data"
                                                         placeholder="Name *" value="{{ $category->name }}" required>
                                                     @error('name')
@@ -52,7 +52,7 @@
                                                     <img src="{{ asset($category->image) }}" alt="" style="width: 100px">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label>Status</label>
+                                                    <label>{{ __('status') }}</label>
                                                     <input type="checkbox" name="isActive" style="width: 20px; height:20px"
                                                         @checked($category->isActive)>
                                                 </div>

@@ -19,15 +19,6 @@
                                 aria-hidden="true"></i></div>
                     </li>
                     <li class="sidebar-list">
-                        <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title" href="#"><i
-                                data-feather="home"></i><span class="lan-3">Dashboard
-                            </span></a>
-                        <ul class="sidebar-submenu">
-                            <li><a class="lan-4" href="index.html">Default</a></li>
-                            <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title link-nav" href="{{ route('admin.role.index') }}">
                             <i data-feather="user-plus"> </i>
                             <span>{{ __('roles') }}</span>

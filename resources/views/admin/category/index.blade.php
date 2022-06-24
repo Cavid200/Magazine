@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>Product list</h3>
+                    <h3>{{ __('category list') }}</h3>
                 </div>
                 <div class="col-6">
                     <a style="float: right" href="{{ route('admin.category.create') }}"
@@ -30,11 +30,11 @@
                             <table class="display" id="categories">
                                 <thead>
                                     <tr>
-                                        <th>Row</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th>{{ __('row') }}</th>
+                                        <th>{{ __('name') }}</th>
+                                        <th>{{ __('image') }}</th>
+                                        <th>{{ __('status') }}</th>
+                                        <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

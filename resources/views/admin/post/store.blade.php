@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('post create') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -51,7 +51,7 @@
                                             <input class="form-control" type="file" name="image">
                                         </div>
                                         <div class="mb-3">
-                                            <label>Tag</label>
+                                            <label>{{ __('tags') }}</label>
                                             <select name="tags[]"  multiple id="choices-multiple-remove-button">
                                                 @foreach ($tags as $tag)
                                                 <option value="{{ $tag->id }}">{{ $tag->name }}</option>
@@ -62,7 +62,7 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label>Categories</label>
+                                            <label>{{ __('categories') }}</label>
                                             <select name="categories[]"  multiple id="choices-multiple-remove-button">
                                                 @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>

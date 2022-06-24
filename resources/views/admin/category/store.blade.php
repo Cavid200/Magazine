@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h3>Role Create</h3>
+                        <h3>{{ __('category create') }}</h3>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -29,7 +29,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label>Name</label>
+                                                <label>{{ __('name') }}</label>
                                                 <input class="form-control" type="text" name="name"
                                                     placeholder="Name *" required>
                                                 @error('name')
@@ -44,7 +44,7 @@
                                             @enderror
                                             </div>
                                             <div class="mb-3">
-                                                <label>Status</label>
+                                                <label>{{ __('status') }}</label>
                                                 <input type="checkbox" name="isActive" style="width: 20px; height:20px">
                                             </div>
                                         </div>

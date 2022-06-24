@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    @foreach ($posts->take(1) as $post)
+                    @foreach ($posts->skip(3)->take(1) as $post)
                         <div class="single-main-blog-item-two bg-1 mb-30" style="background-image: url({{ $post->image }})">
                             <span class="blog-link">
                                 @foreach ($post->categories as $category)
@@ -55,7 +55,7 @@
 
                 <div class="col-lg-6">
                     <div class="row">
-                        @foreach ($posts->skip(1)->take(4) as $post)
+                        @foreach ($posts->skip(4)->take(4) as $post)
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-main-blog-item-two middle mb-30">
                                     <img src="{{ asset($post->image) }}" alt="Image">
