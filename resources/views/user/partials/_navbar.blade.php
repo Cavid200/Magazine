@@ -45,11 +45,11 @@
                             </ul>
                         </div>
                         @auth
-                            {{ auth()->user()->fullname }} <a href="{{ route('user.sign_out') }}">Sign out</a>
+                            {{ auth()->user()->fullname }} <a href="{{ route('user.sign_out') }}">{{ __('sign out') }}</a>
                         @endauth
                         @guest
-                            <a href="{{ route('user.register') }}">Sign up</a> / <a
-                                href="{{ route('user.login') }}">Sign in</a>
+                            <a href="{{ route('user.register') }}">{{ __('sign up') }}</a> / <a
+                                href="{{ route('user.login') }}">{{ __('sign in') }}</a>
                         @endguest
 
 
@@ -61,7 +61,7 @@
                             <div class="search-overlay search-popup">
                                 <div class='search-box'>
                                     <form class="search-form" action="{{ route('search')}}" method="get">
-                                        <input class="search-input" name="search" placeholder="Search" type="text">
+                                        <input class="search-input" name="search" placeholder="{{ __('search') }}" type="text">
 
                                         <button class="search-button" type="submit"><i
                                                 class="bx bx-search"></i></button>

@@ -55,7 +55,6 @@
                         </a>
                     </li>
                 </ul>
-
                 <p>Copyright <i class="bx bx-copyright"></i>2021 Linka. Designed By<a href="https://envytheme.com/"
                         target="blank"> EnvyTheme</a></p>
             </div>

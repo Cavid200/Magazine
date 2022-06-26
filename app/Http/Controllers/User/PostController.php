@@ -17,7 +17,15 @@ class PostController extends Controller
         $post->save();
         $popular_posts=Post::orderByDesc('views')->take(4)->get();
         $like_count=Like::where('post_id',$post->id)->count();
-        $like_exists = Like::where('user_id',auth()->user()->id)->where('post_id',$post->id)->count();
+        if(auth()->user())
+        {
+            $like_exists = Like::where('user_id',auth()->user()->id)->where('post_id',$post->id)->count();
+        }
+        else
+        {
+            $like_exists=null;
+        }
+
         return view('user.post.show',compact('post','popular_posts','like_count','like_exists')); 
     }
 

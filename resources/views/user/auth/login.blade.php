@@ -9,13 +9,13 @@
                     @csrf
                     <div class="col-12">
                         <div class="form-group">
-                            <input class="form-control" type="email" name="email" placeholder="Email">
+                            <input class="form-control" type="email" name="email" placeholder="{{ __('email') }}">
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="form-group">
-                            <input class="form-control" type="password" name="password" placeholder="Password">
+                            <input class="form-control" type="password" name="password" placeholder="{{ __('password') }}">
                         </div>
                     </div>
 
@@ -23,25 +23,25 @@
                         <div class="agree-label">
                             <input type="checkbox" id="chb1">
                             <label for="chb1">
-                                Remember Me
+                                {{ __('Remember Me') }}
                             </label>
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-sm-6">
-                        <a class="forget" href="recover-password.html">Forgot my password?</a>
+                        <a class="forget" href="recover-password.html"></a>
                     </div>
 
                     <div class="col-12">
                         <button class="default-btn btn-two" type="submit">
-                            Log In Now
+                            {{ __('sign in') }}
                         </button>
                     </div>
 
                     <div class="col-12">
                         <p class="account-desc">
-                            Not a member?
-                            <a href="{{ route('user.register') }}">Register</a>
+                            {{ __('Not a member?') }}
+                            <a href="{{ route('user.register') }}">{{ __('sign up') }}</a>
                         </p>
                     </div>
             </div>

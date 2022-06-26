@@ -3,14 +3,13 @@
     <div class="page-title-area bg-9">
         <div class="container">
             <div class="page-title-content">
-                <h2>Contact</h2>
+                <h2>{{ __('contact us') }}</h2>
                 <ul>
-                    <li>
-                        <a href="index.html">
-                            Home
+                    <li>{{ __('return to home page') }}/
+                        <a href="{{ route('user.index') }}">
+                            {{ __('home') }}
                         </a>
                     </li>
-                    <li>Contact</li>
                 </ul>
             </div>
         </div>
@@ -22,7 +21,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
                         <i class="bx bx-envelope"></i>
-                        <h3>Email Us:</h3>
+                        <h3>{{ __('email us') }}:</h3>
                         <a href="/cdn-cgi/l/email-protection#20494e464f604152445549580e434f4d"><span class="__cf_email__"
                                 data-cfemail="91f8fff7fed1fdf8fffaf0bff2fefc">{{ $contact->email }}</span></a>
                     </div>
@@ -30,14 +29,14 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
                         <i class="bx bx-phone-call"></i>
-                        <h3>Call Us:</h3>
+                        <h3>{{ __('call us') }}:</h3>
                         <a href="tel:+(123)1800-567-8990">Tel.{{ $contact->phone }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
                         <i class="bx bx-location-plus"></i>
-                        <h3>Location</h3>
+                        <h3>{{ __('location') }}</h3>
                         <a href="{{ $contact->map }}">{{ $contact->address }}</a>
                     </div>
                 </div>
@@ -52,7 +51,7 @@
                     <div class="contact-wrap contact-pages mb-0">
                         <div class="contact-form">
                             <div class="section-title">
-                                <h2>Drop us a message for any query</h2>
+                                <h2>{{ __('Drop Us A Message For Any Query') }}</h2>
                             </div>
                             <form method="post" novalidate="true" action="{{ route('user.post_contact') }}">
                                 @csrf
@@ -60,7 +59,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="name" class="form-control" required=""
-                                                data-error="Please enter your name" placeholder="Your Name">
+                                                data-error="Please enter your name" placeholder="{{ __('fullname') }}">
                                             @error('name')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -71,7 +70,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control" required=""
-                                                data-error="Please enter your email" placeholder="Your Email">
+                                                data-error="Please enter your email" placeholder="{{ __('email') }}">
                                             @error('email')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -83,7 +82,7 @@
                                         <div class="form-group">
                                             <input type="text" name="phone" required=""
                                                 data-error="Please enter your number" class="form-control"
-                                                placeholder="Your Phone">
+                                                placeholder="{{ __('phone') }}">
                                             @error('phone')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -93,7 +92,7 @@
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="subject" class="form-control" required=""
-                                                data-error="Please enter your subject" placeholder="Your Subject">
+                                                data-error="Please enter your subject" placeholder="{{ __('subject') }}">
                                             @error('subject')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -104,7 +103,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                             <textarea name="message" class="form-control" cols="30" rows="5" required="" data-error="Write your message"
-                                                placeholder="Your Message"></textarea>
+                                                placeholder="{{ __('message') }}"></textarea>
                                             @error('message')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -115,7 +114,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two disabled"
                                             style="pointer-events: all; cursor: pointer;">
-                                            Send Message
+                                           {{ __('Send Message') }}
                                         </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>

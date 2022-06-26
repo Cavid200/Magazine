@@ -9,11 +9,12 @@
                         <div class="article-content">
                             <div class="entry-meta">
                                 <ul>
-                                    <li><span>Posted On:</span>
+                                    <li><span>{{ __('Posted On') }}:</span>
                                         <a href="#">{{ $post->created_at->diffForHumans() }}</a>
                                     </li>
-                                    <li><span>Posted By:</span> <a href="#">{{ $post->user->fullname }}</a></li>
-                                    <li><span>Views</span> <a href="#">{{ $post->views }}</a></li>
+                                    <li><span>{{ __('Posted by') }}:</span> <a
+                                            href="#">{{ $post->user->fullname }}</a></li>
+                                    <li><span>{{ __('Views') }}:</span> <a href="#">{{ $post->views }}</a></li>
                                     <form>
                                         <input id="post_like" type="submit" name="like"
                                             value="{{ $like_exists == 1 ? 'Unlike' : 'Like' }}" class="btn btn-success">
@@ -36,7 +37,7 @@
 
 
                         <div class="comments-area">
-                            <h3 class="comments-title">{{ $post->comments->count() }} Comments:</h3>
+                            <h3 class="comments-title">{{ __('comments') }}:{{ $post->comments->count() }}</h3>
 
                             <ol class="comment-list">
                                 @foreach ($post->comments as $comment)
@@ -70,19 +71,19 @@
                             </ol>
 
                             <div class="comment-respond">
-                                <h3 class="comment-reply-title">Leave a Reply</h3>
+                                <h3 class="comment-reply-title">{{ __('Leave a reply') }}</h3>
 
                                 <form class="comment-form">
                                     @csrf
                                     <p class="comment-form-author">
-                                        <label>Fullname <span class="required">*</span></label>
+                                        <label>{{ __('fullname') }} <span class="required">*</span></label>
                                         <input type="text" id="fullname" name="fullname" required="required">
                                         @error('fullname')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </p>
                                     <p class="comment-form-comment">
-                                        <label>Content</label>
+                                        <label>{{ __('content') }}</label>
                                         <textarea name="content" id="content" cols="45" rows="5" maxlength="65525" required="required"></textarea>
                                         @error('content')
                                             <span class="text-danger">{{ $message }}</span>
@@ -90,7 +91,7 @@
                                     </p>
                                     <p class="form-submit">
                                         <input type="submit" id="post_comment" name="submit" class="submit"
-                                            value="Post A Comment">
+                                            value="{{ __('post a comment ') }}">
                                     </p>
                                 </form>
                             </div>
@@ -102,7 +103,7 @@
                 <div class="col-lg-4 col-md-12">
                     <aside class="widget-area" id="secondary">
                         <section class="widget widget-peru-posts-thumb">
-                            <h3 class="widget-title">Popular Posts</h3>
+                            <h3 class="widget-title">{{ __('popular news') }}</h3>
                             <div class="post-wrap">
                                 @foreach ($popular_posts as $popular_post)
                                     <article class="item">
@@ -127,7 +128,7 @@
                         </section>
 
                         <section class="widget widget_tag_cloud">
-                            <h3 class="widget-title">Tags</h3>
+                            <h3 class="widget-title">{{ __('tags') }}</h3>
                             <div class="post-wrap">
                                 <div class="tagcloud">
                                     @foreach ($post->tags as $tag)
@@ -185,35 +186,42 @@
         $("#post_like").click(function(event) {
             event.preventDefault();
             let count = {{ $like_count }};
-            let test = count;
+           
             $.ajax({
                 url: '{{ route('user.post.like', $post->id) }}',
                 type: 'get',
                 success: function(res) {
-                    if (res[0] == 'success_like') {
-                        $('#post_like').val('Unlike')
-                        test = count + 1;
-                        $('#like_count').html(test)
-                    } else {
-                        $('#post_like').val('like')
-                        test = count - 1;
-                        $('#like_count').html(test)
+                    let test = count;
+                    if (res[0] !== 'error') {
+                        if (res[0] == 'success_like') {
+                            $('#post_like').val('Unlike')
+                            count = test + 1;
+                            $('#like_count').html(count)
+                        } else {
+                            $('#post_like').val('like')
+                            count = test - 1;
+                            $('#like_count').html(count)
+                        }
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: res[1],
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     }
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: res[1],
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                },
-                error: function(res) {
-                    Swal.fire({
+                    else{
+                        Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
                         text: res[1],
                     })
+
+                    }
+
                 },
+               
+                    
             })
         })
     </script>

@@ -10,6 +10,7 @@ use App\Models\MainImage;
 use App\Models\CategoryPost;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
 
 class IndexController extends Controller
 {

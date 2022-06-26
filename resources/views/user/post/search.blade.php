@@ -4,7 +4,7 @@
     <section class="main-inspiration-area five pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Recent News</h2>
+                <h2>{{ __('search results') }}</h2>
             </div>
             <div class="row">
                 @forelse ($posts as $post)
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 @empty
-                    bele netice tapilmadi
+                    {{ __('Not found') }}
                 @endforelse
 
             </div>

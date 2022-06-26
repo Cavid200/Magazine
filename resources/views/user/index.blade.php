@@ -1,6 +1,7 @@
 @extends('user.user_main')
 @section('content')
     <!-- Start Banner Area Five -->
+    
 
     <section class="banner-area banner-area-five" style="background-image: url({{ asset($main_image->image) }})">
         <div class="container">
@@ -94,7 +95,7 @@
     <section class="latest-project-area five pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Popular News</h2>
+                <h2>{{ __('popular news') }}</h2>
             </div>
             <div class="row">
                 @foreach ($popular_posts as $popular_post )
@@ -135,7 +136,7 @@
     <section class="main-inspiration-area five pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Recent News</h2>
+                <h2>{{ __('recent news') }}</h2>
             </div>
             <div class="row">
                 @foreach ( $recent_posts as $recent_post )
@@ -178,7 +179,7 @@
     <section class="economics-area five pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Editor Choice</h2>
+                <h2>{{ __('editor choice') }}</h2>
             </div>
 
             <div class="row">

@@ -11,7 +11,7 @@
 
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="firstname" placeholder="First Name" required>
+                                <input class="form-control" type="text" name="firstname" placeholder="{{ __('firstname') }}" required>
                                 @error('firstname')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -20,7 +20,7 @@
 
                         <div class="col-md-12 col-sm-12 ">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="lastname" placeholder="Last Name">
+                                <input class="form-control" type="text" name="lastname" placeholder="{{ __('lastname') }}">
                                 @error('lastname')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email Address">
+                                <input class="form-control" type="email" name="email" placeholder="{{ __('email') }}">
                                 @if ($message = session('error'))
                                     <span class="text-danger">{{ $message }}</span>
                                 @endif
@@ -37,7 +37,7 @@
 
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
-                                <input class="form-control" type="password" name="password" placeholder="Password">
+                                <input class="form-control" type="password" name="password" placeholder="{{ __('password') }}">
                                 @error('password')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -47,7 +47,7 @@
                         <div class="col-md-12 col-sm-12 ">
                             <div class="form-group">
                                 <input class="form-control" type="password" name="password_confirmation"
-                                    placeholder="Confirm Password">
+                                    placeholder="{{ __('confirm password') }}">
                                 @error('password_conformation')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
@@ -58,14 +58,14 @@
 
                         <div class="col-12">
                             <button class="default-btn btn-two" type="submit">
-                                Register Account
+                                {{ __('sign up') }}
                             </button>
                         </div>
 
                         <div class="col-12">
                             <p class="account-desc">
-                                Already have an account?
-                                <a href="{{ route('user.login') }}"> Log In</a>
+                                {{ __('Already have an account?') }}
+                                <a href="{{ route('user.login') }}">{{ __('sign in') }}</a>
                             </p>
                         </div>
                     </div>
