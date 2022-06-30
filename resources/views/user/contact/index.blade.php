@@ -17,32 +17,34 @@
     <section class="contact-info-area pt-100 pb-70">
         <div class="container">
             <div class="row">
-                @foreach ( $contacts as $contact )
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-envelope"></i>
-                        <h3>{{ __('email us') }}:</h3>
-                        <a href="/cdn-cgi/l/email-protection#20494e464f604152445549580e434f4d"><span class="__cf_email__"
-                                data-cfemail="91f8fff7fed1fdf8fffaf0bff2fefc">{{ $contact->email }}</span></a>
+                @foreach ($contacts as $contact)
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-envelope"></i>
+                            <h3>{{ __('email us') }}:</h3>
+                            <a href="/cdn-cgi/l/email-protection#20494e464f604152445549580e434f4d"><span
+                                    class="__cf_email__"
+                                    data-cfemail="91f8fff7fed1fdf8fffaf0bff2fefc">{{ $contact->email }}</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-phone-call"></i>
-                        <h3>{{ __('call us') }}:</h3>
-                        <a href="tel:+(123)1800-567-8990">Tel.{{ $contact->phone }}</a>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>{{ __('call us') }}:</h3>
+                            <a href="tel:+(123)1800-567-8990">Tel.{{ $contact->phone }}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-location-plus"></i>
-                        <h3>{{ __('location') }}</h3>
-                        <a href="{{ $contact->map }}">{{ $contact->address }}</a>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="single-contact-info">
+                            <i class="bx bx-location-plus"></i>
+                            <h3>{{ __('location') }}</h3>
+                            <a href="#">{{ $contact->address }}</a>
+                        </div>
                     </div>
-                </div>
-        @endforeach
+                @endforeach
             </div>
         </div>
+        {!! $contact->map !!}
     </section>
     <section class="main-contact-area pb-100">
         <div class="container">
@@ -102,8 +104,8 @@
 
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
-                                            <textarea name="message" class="form-control" cols="30" rows="5" required="" data-error="Write your message"
-                                                placeholder="{{ __('message') }}"></textarea>
+                                            <textarea name="message" class="form-control" cols="30" rows="5" required=""
+                                                data-error="Write your message" placeholder="{{ __('message') }}"></textarea>
                                             @error('message')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
@@ -114,7 +116,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two disabled"
                                             style="pointer-events: all; cursor: pointer;">
-                                           {{ __('Send Message') }}
+                                            {{ __('Send Message') }}
                                         </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>

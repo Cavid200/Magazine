@@ -6,57 +6,29 @@
                 <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Image">
 
                 <ul class="social">
+                    @foreach ($socials as $social )
                     <li>
                         <a href="#" target="_blank">
-                            <i class="bx bxl-facebook"></i>
+                            <i class="{{ $social->icon }}"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="bx bxl-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="bx bxl-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="bx bxl-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="bx bxl-instagram"></i>
-                        </a>
-                    </li>
+                    @endforeach
                 </ul>
 
                 <ul class="important-links">
                     <li>
-                        <a href="author.html">
-                            Author
-                        </a>
+                        <a href="/" class="nav-link">{{ __('home') }}</a>
                     </li>
                     <li>
-                        <a href="full-width-blog.html">
-                            Full Width Blog
-                        </a>
+                        <a href="{{ route('user.category.index') }}"
+                        class="nav-link">{{ __('categories') }}</a>
                     </li>
                     <li>
-                        <a href="video.html">
-                            Video
-                        </a>
+                        <a href="{{ route('user.contact') }}" class="nav-link">{{ __('contact') }}</a>
                     </li>
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
+                    
                 </ul>
-                <p>Copyright <i class="bx bx-copyright"></i>2021 Linka. Designed By<a href="https://envytheme.com/"
-                        target="blank"> EnvyTheme</a></p>
+                <p>{{ $settings->footer }}</p>
             </div>
         </div>
     </footer>
